@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
   $("form#favoriteAnimal").submit(function(event){
+    event.preventDefault();
+
     var response = $("select#animalChoices").val();
 
 
@@ -13,4 +15,6 @@ $(document).ready(function(){
     }else
       $('#dogshow').show();
     })
+
+
   });
